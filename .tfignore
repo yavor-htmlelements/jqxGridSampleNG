@@ -1,0 +1,71 @@
+# Ignore the NuGet packages folder in the root of the repository.
+# If needed, prefix 'packages' with additional folder names if it's 
+# not in the same folder as .tfignore.
+packages
+
+# include package target files which may be required for msbuild,
+# again prefixing the folder name as needed.
+!packages/*.targets
+
+
+#reference https://github.com/sirkirby/tfignore/blob/master/VisualStudio.tfignore
+
+/Scripts/*
+/coverage/*
+
+.gitignore
+*.gitkeep
+.editorconfig
+package-lock.json
+
+# compiled output
+/dist/*
+/dist-server/*
+/tmp/*
+/out-tsc/*
+/bin/*
+/obj/*
+
+# dependencies
+/node_modules/*
+
+# Package Folders
+/.ng_pkg_build/*
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+.tfignore
+launch.json
+*.code-workspace

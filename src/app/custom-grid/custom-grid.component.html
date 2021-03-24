@@ -1,0 +1,35 @@
+<ng-container *ngFor="let navItem of navItems">
+  <ng-container *ngTemplateOutlet="basicNavItem">
+  </ng-container>
+</ng-container>
+
+<ng-template #basicNavItem>
+  <div>above</div>
+</ng-template>
+
+<jqxGrid [source]="DataAdapter" [theme]="'bootstrap'" showfilterrow="true" height="75%" [filterable]="true"
+  [sortable]="true" [columns]="columns" #grid
+  [deferreddatafields]="['id', 'name']"
+  ></jqxGrid>
+<button type="button" (click)="switchGrid()">Switch</button>
+
+ <ng-container *ngFor="let navItem of navItems">
+  <ng-container *ngTemplateOutlet="basicNavItem2">
+  </ng-container>
+</ng-container>
+
+<ng-template #basicNavItem2>
+  <div>below</div>
+</ng-template> 
+
+ <p>Test ngFor about the jqxInput</p>
+<jqxInput [width]="200" [height]="40" [source]="['Item 1', 'Item 2']" [placeHolder]="'Simple text'"></jqxInput>
+
+<div *ngFor="let item of data">
+  <input value={{item.name.value}} />
+ <jqxInput #customInput [width]="200" [height]="40" [source]="sourceInput" [placeHolder]="'Simple text'"></jqxInput> 
+
+ <div #parent>
+        <jqxInput #customInput [width]="200" [height]="40" [source]="sourceInput" [placeHolder]="'Simple text'"></jqxInput>
+    </div>
+</div> 
